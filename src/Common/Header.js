@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
 import '../assets/Header.css';
 import FooterComp from '../Components/FooterSide';
+import ReactDatePicker from 'react-datepicker';
 
 function Header() {
 
     const [showPage, setShowPage] = useState(false)
+    const [date, set] = useState(false)
+
     const seeToGo = () => {
         console.log("open to new tab");
         setShowPage(true)
@@ -17,14 +20,14 @@ function Header() {
                     <h3 className='box' onClick={() => seeToGo()}>See and Go</h3>
                     <h3 className='box'>Plan Your Trip</h3>
                     <h3 className='box'>Travel Essentials</h3>
-                    <h3 className='box'>Saudi Calendar</h3>
-                    <h3 className='box'>Experiences</h3>
+                    <h3 className='box' >Travel Date</h3>
+                    <h3 className='box'>Our Experiences</h3>
                     <h3 className='box'>Journey Map</h3>
                     {
                         showPage ? (<>
                             <div className='seedo'>
                                 <div >
-                                    <button onClick={()=>setShowPage(false)}>Close</button>
+                                    <button onClick={() => setShowPage(false)}>Close</button>
                                 </div>
                             </div>
                         </>) :
@@ -32,10 +35,24 @@ function Header() {
 
                             </>)
                     }
-                    <div className='signoff'>
+
+                    {/* <div className='signoff'>
                         <button className='button1'>Login</button>
                         <button className='button1'>Log out</button>
-                    </div>
+                    </div> */}
+                    <from className="regFrom">
+                        <h2>Register Yourself</h2>
+                        <input className='inputback' placeholder='Enter your name'></input>
+                        <input className='inputback' placeholder='Enter your mobile number'></input>
+                        <input className='inputback' placeholder='Enter your pan number'></input>
+                        <input className='inputback' placeholder='Enter your location'></input>
+                        <input className='inputback' placeholder='Enter your state'></input>
+
+                        <div>
+                            <button>Submit</button>
+                        </div>
+                    </from>
+
                 </div>
 
             </div>
