@@ -1,0 +1,35 @@
+.header {}
+
+.header-1stCileld {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 500px;
+    background-image: url("/src/assets/img/oneImg.webp");
+    /* background-size: 100% auto; */
+    /* background-position: center center; */
+    background-size: cover;
+}
+
+.seedo {
+    border: 1px solid red;
+    background: white;
+    height: 500px;
+    width: 400px;
+    transition: transform 0.3s;
+}
+
+.box {
+    height: 7%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.box:hover {
+    background-color: #2314af;
+    
+}
+
+.box:hover .arrow {
+    display: block;
+}
